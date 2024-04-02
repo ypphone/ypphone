@@ -188,11 +188,11 @@ section#main_footer {
 
 .container-two {
   width: 65%;
-  margin: 0px auto;
+/*  margin: 0px auto;
   display: flex;
-/* flex-wrap: wrap; */
+ flex-wrap: wrap; 
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 
