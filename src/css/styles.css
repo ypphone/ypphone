@@ -190,7 +190,10 @@ section#main_footer {
   width: 65%;
  margin: 0px auto;
   display: flex;
- justify-content: center;/*
+ justify-content: center;
+  text-align: center;
+  /*
+  
  flex-wrap: wrap; 
   align-items: center; */
 
