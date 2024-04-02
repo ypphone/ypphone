@@ -186,16 +186,6 @@ section#main_footer {
   justify-content: space-between;
 }
 
-.container2 {
-  width: 65%;
-  margin: 0px auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-  align-items: center;
-}
-
 .image-container {
   position: relative;
   height: 100%;
