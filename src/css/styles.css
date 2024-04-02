@@ -185,6 +185,17 @@ section#main_footer {
   align-items: flex-start;
   justify-content: space-between;
 }
+
+.container2 {
+  width: 30%;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .image-container {
   position: relative;
   height: 100%;
