@@ -1,0 +1,168 @@
+/* #background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+} */
+
+#main_section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  background-image: url("/src/img/main/city(pc).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.title-box p {
+  color: white;
+}
+
+#naver-photos .title-box p,
+#services .title-box p {
+  color: black;
+}
+
+#green-bg {
+  background-color: #3da541;
+}
+
+#reasons {
+  background-image: url("/src/img/main/main_background_2.png");
+  text-align: center;
+}
+#reasons_div {
+  margin: 0 auto;
+}
+#reasons .list-white {
+  background-color: white;
+  display: inline-block;
+  padding: 40px 0;
+}
+#reasons .list-box {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 10% 20px 12%;
+}
+#reasons .list-top {
+  display: flex;
+  margin-bottom: 20px;
+}
+#reasons .list-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #03c95b;
+  font-weight: 600;
+  color: white;
+  width: 38px;
+  height: 38px;
+  margin-right: 20px;
+}
+#reasons .list-title {
+  flex-grow: 1; /* 제목이 남은 공간을 모두 차지하도록 설정 */
+  text-align: left;
+  font-weight: 600;
+}
+#reasons .list-text {
+  margin-left: 60px;
+  text-align: start;
+  line-height: 40px;
+  color: #535252;
+  font-weight: 500;
+}
+
+#services .box {
+  width: 48%;
+  box-sizing: border-box;
+}
+#services .text-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 415px;
+  color: white;
+}
+#services .p36 {
+  font-weight: 600;
+}
+#services .list {
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#services .p22 {
+  font-weight: 300;
+  margin: 10px 0;
+}
+#services .button-link {
+  background-color: #cbcbcb;
+  border-radius: 36px;
+  padding: 10px 10px;
+  color: black;
+  text-align: center;
+  font-weight: 500;
+  width: 230px;
+}
+
+@media only screen and (max-width: 900px) {
+  #services .box {
+    width: 100%;
+  }
+  #services .box:first-child {
+    margin-bottom: 20px;
+  }
+  #services .text-overlay {
+    height: 390px;
+  }
+  #services .list {
+    height: 220px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #green-bg .box:first-child {
+    margin-bottom: 40px;
+  }
+  #reasons .list-top {
+    flex-direction: column;
+  }
+  #reasons .list-number {
+    width: 30px;
+    height: 30px;
+    margin-top: -2px;
+    margin-right: 15px;
+    font-size: 15px;
+  }
+  #reasons .list-title {
+    margin-top: 20px;
+  }
+  #reasons .list-text {
+    margin-left: 0;
+    line-height: 35px;
+  }
+
+  #services .container {
+    width: 80%;
+  }
+  #services .text-overlay {
+    height: 360px;
+  }
+  #services .list {
+    height: 210px;
+  }
+  #services .button-link {
+    width: 165px;
+  }
+}

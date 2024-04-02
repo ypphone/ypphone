@@ -1,0 +1,159 @@
+<header id="header-background" style="color: black;">
+  <!-- <div style="width: 13%"></div> -->
+  <div
+  class="container"
+    style="
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+    "
+  >
+    <a id="pc_logo" href="/index.html" >
+      <img
+        src="/src/img/logo_white.png"
+        alt="marketing thedeep logo"
+        style="width: 120px"
+      />
+    </a>
+
+    <!-- 모바일 사이즈일 때 메뉴 아이콘 -->
+    <div id="mobile_menu">
+      <div style="display: flex;
+      justify-content: space-between;
+      align-items: center;">
+       <a href="/index.html"
+       ><img id="mobile_logo" src="/src/img/logo_white.png" style="width: 100px" /></a>
+        <img id="menu_icon" src="/src/img/menu_white.png" style="width: 28px;" />
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <div id="new_window">
+      <div style="display: flex; justify-content: space-between">
+        <div style="padding: 20px; margin-top: 20px;">
+          <a href="/index.html"><img src="/src/img/logo_black.png" style="width: 120px" /></a>
+        </div>
+        <div style="padding: 20px; align-self: center; margin-top: 26px">
+          <img
+            id="close_button"
+            src="/src/img/close_button.png"
+            style="width: 24px"
+          />
+        </div>
+      </div>
+      <div>
+        <ul id="main_menu">
+          <li>
+            <a href="#">블로그</a>
+            <li class="submenu"><a href="/src/pages/blog_deep_page.html">딥블단</a></li>
+            <li class="submenu"><a href="/src/pages/blog_brand_page.html">브랜드 블로그</a></li>
+          </li>
+          <li>
+            <a href="#">플레이스</a>
+            <li class="submenu"><a href="/src/pages/place_seo_page.html">세팅&최적화</a></li>
+            <li class="submenu"><a href="/src/pages/place_exposure_page.html">상위노출</a></li>
+          </li>
+          <li>
+            <a href="/src/pages/contact.html">문의하기</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 메뉴 목록 -->
+    <nav id="pc_menu">
+      <ul>
+        <li><a href="/src/pages/blog_deep_page.html">블로그</a></li>
+        <li><a href="/src/pages/place_seo_page.html">플레이스</a></li>
+        <li
+          style="
+            border-radius: 16px;
+            border: 1px solid #03c95b;
+            padding: 6px 20px;
+            background-color: #03c95b;
+            margin-right: 12px;
+          "
+        >
+          <a href="/src/pages/contact.html">문의하기</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- <div style="width: 13%"></div> -->
+</header>
+
+<script>
+  // Function to open the new window with animation
+  function openNewWindow() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("new_window").classList.add("show");
+  }
+
+  // Function to close the new window with animation
+  function closeNewWindow() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("new_window").classList.remove("show");
+  }
+
+  // Event listener for clicking the menu icon
+  document.getElementById("menu_icon").addEventListener("click", function () {
+    openNewWindow();
+  });
+
+  // Event listener for clicking the overlay (to close the new window)
+  document.getElementById("overlay").addEventListener("click", function () {
+    closeNewWindow();
+  });
+
+  document
+    .getElementById("close_button")
+    .addEventListener("click", function () {
+      closeNewWindow();
+    });
+</script>
+
+<!-- <script>
+  window.addEventListener("load", function () {
+    var mobileMenu = document.getElementById("mobile_menu");
+    var pcMenu = document.getElementById("pc_menu");
+    var pcLogo = document.getElementById("pc_logo");
+
+    if (window.innerWidth <= 584) {
+      mobileMenu.style.display = "block";
+      pcMenu.style.display = "none";
+      pcLogo.style.display = "none";
+    } else {
+      mobileMenu.style.display = "none";
+      pcMenu.style.display = "block";
+      pcLogo.style.display = "block";
+    }
+  });
+</script> -->
+
+<script>
+  window.addEventListener("scroll", function () {
+    var header = document.getElementById("header-background");
+    if (window.scrollY > 91) {
+      header.style.backgroundColor = "black";
+    } else {
+      header.style.backgroundColor = "transparent";
+    }
+  });
+</script>
+<!-- 
+<script>
+  window.addEventListener("resize", function () {
+    var mobileMenu = document.getElementById("mobile_menu");
+    var pcMenu = document.getElementById("pc_menu");
+    var pcLogo = document.getElementById("pc_logo");
+
+    if (window.innerWidth <= 584) {
+      mobileMenu.style.display = "block";
+      pcMenu.style.display = "none";
+      pcLogo.style.display = "none";
+    } else {
+      mobileMenu.style.display = "none";
+      pcMenu.style.display = "block";
+      pcLogo.style.display = "block";
+    }
+  });
+</script> -->

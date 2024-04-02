@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://예쁜중고폰.com/sitemap.xml
