@@ -118,7 +118,7 @@ section#sub_section {
   text-align: center;
   display: flex;
   overflow: hidden;
-  background-image: url("/src/img/main/main_background_1.jpg"); /* New background image URL */
+  background-image: url("/src/img/main/main_background_1.png"); /* New background image URL */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
