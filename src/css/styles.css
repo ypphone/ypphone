@@ -141,8 +141,8 @@ section#main_footer {
   align-items: end;
 }
 #main_footer_div .button {
-  padding: 10px 10px;
-  margin-top: 10px;
+  padding: 10px 30px;
+  margin-top: 25px;
   border-radius: 36px;
   background-color: white;
   color: #f83aaa;
