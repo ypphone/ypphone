@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더 스크롤 효과</title>
+    <style>
+        /* 기본 스타일 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        .header.scrolled {
+            background-color: #007BFF;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .header.scrolled h1 {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>스크롤 효과 헤더</h1>
+    </header>
+
+    <div style="height: 800px;">
+        <!-- 페이지 내용 -->
+    </div>
+
+    <script>
+        // 스크롤 이벤트를 감지하여 헤더의 클래스를 변경하는 JavaScript 코드
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+이 예제는 헤더 스크롤 효과를 적용할 때 헤더 내용의 스타일을 변경합니다. 페이지를 스크롤하면 헤더의 텍스트 크기가 작아지고 배경 색상이 변경됩니다.
+
+ 
