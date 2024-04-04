@@ -112,6 +112,19 @@ section {
   transition: background-color 0.5s;
 }
 
+section#sub_section {
+  height: 30vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  overflow: hidden;
+  background-image: url("/src/img/main/main_background_1.jpg"); /* New background image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
 section#main_footer {
   min-height: 40vh;
   width: 100%;
