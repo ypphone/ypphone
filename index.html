@@ -29,14 +29,21 @@
       content="천안중고폰, 천안, 중고폰, 매입, 판매, 매장, 알뜰폰, 선불폰, 아이폰, 수리, 갤럭시, 박스폰, 가개통, 자급제, "
     />
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M878XSQR');</script>
-<!-- End Google Tag Manager -->
-    
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M878XSQR");
+    </script>
+    <!-- End Google Tag Manager -->
+
     <title>천안중고폰 | 예쁜중고폰</title>
     <link rel="stylesheet" href="/src/css/styles.css" />
     <link rel="stylesheet" href="/src/css/index.css" />
@@ -48,13 +55,105 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="/src/js/jquery.min.js"></script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M878XSQR"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M878XSQR"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    
-    <div id="header"></div>
+    <div id="container__div">
+      <header id="header-background" style="color: white;">
+        <!-- <div style="width: 13%"></div> -->
+        <div
+        class="container"
+          style="
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <a id="pc_logo" href="/index.html" >
+            <img
+              src="/src/img/logo_white.png"
+              alt="logo"
+              style="width: 120px"
+            />
+          </a>
+      
+          <!-- 모바일 사이즈일 때 메뉴 아이콘 -->
+          <div id="mobile_menu">
+            <div style="display: flex;
+            justify-content: space-between;
+            align-items: center;">
+             <a href="tel:0507-1496-0568" >
+      
+              <!-- 전화기 아이콘 -->
+              <img id="mobile_logo" src="/src/img/callbutton_white.png" style="width: 28px;" /></a>
+              <a href="/index.html" >
+              <img id="mobile_logo" src="/src/img/logo_white.png" style="width: 100px;" /></a>
+              <img id="menu_icon" src="/src/img/menu_white.png" style="width: 28px;" />
+            </div>
+          </div>
+      
+      
+      <div id="overlay"></div>
+          <div id="new_window">
+            <div style="display: flex; justify-content: space-between">
+              <div style="padding: 20px; margin-top: 20px;">
+                <a href="/index.html"><img src="/src/img/logo_black.png" style="width: 120px" /></a>
+              </div>
+              <div style="padding: 20px; align-self: center; margin-top: 26px">
+                <img
+                  id="close_button"
+                  src="/src/img/close_button.png"
+                  style="width: 24px"
+                />
+              </div>
+            </div>
+            <div>
+              <ul id="main_menu">
+      
+                  <li><a href="/src/pages/buy.html">매입</a></li>
+                  <li><a href="/src/pages/sell.html">판매</a></li>
+      
+                <li>
+                  <a href="/src/pages/prepaid.html">알뜰/선불폰</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      
+      
+          <!-- 메뉴 목록 -->
+          <nav id="pc_menu">
+            <ul>
+              <li><a class="header__menu__text" href="/src/pages/buy.html">매입</a></li>
+               <li><a class="header__menu__text" href="/src/pages/sell.html">판매</a></li>
+              <li><a class="header__menu__text" href="/src/pages/prepaid.html">알뜰/선불폰</a></li>
+      
+              <li
+                style="
+                  border-radius: 16px;
+                  border: 1px solid #f83aaa;
+                  padding: 6px 20px;
+                  background-color: #f83aaa;
+                    margin-top: 20px;
+                  margin-right: 12px;
+                ">
+                <a>
+                    <font> <i style="font-size: 12px;" class="fas fa-phone-alt"></i> 0507-1496-0568 </font>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- <div style="width: 13%"></div> -->
+      </div>
 
     <section id="main_section">
       <!-- <video id="background-video" autoplay loop muted>
@@ -102,9 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-
-
- <section class="padding">
+    <section class="padding">
       <div class="title-box container">
         <p
           class="p36"
@@ -119,73 +216,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span style="color: #000000">서비스 안내</span>
         </p>
         <p class="p22" style="letter-spacing: -0.5px; font-weight: 500">
-          <span style="color: #000000">중고폰 매입/판매, 알뜰(선불)개통, 휴대폰 교체</span>
+          <span style="color: #000000"
+            >중고폰 매입/판매, 알뜰(선불)개통, 휴대폰 교체</span
+          >
         </p>
       </div>
 
       <div id="reviews" class="container">
         <div class="box">
           <div class="image-container">
-            <img
-              src="/src/img/sec1/buy.png"
-              alt="sec 2-1"
-            />
+            <img src="/src/img/sec1/buy.png" alt="sec 2-1" />
           </div>
         </div>
         <div class="box">
           <div class="image-container">
-            <img
-              src="/src/img/sec1/sell.png"
-              alt="sec 2-2"
-            />
+            <img src="/src/img/sec1/sell.png" alt="sec 2-2" />
           </div>
         </div>
         <div class="box">
           <div class="image-container">
-            <img
-              src="/src/img/sec1/prepaid.png"
-              alt="sec 2-3"
-            />
+            <img src="/src/img/sec1/prepaid.png" alt="sec 2-3" />
           </div>
         </div>
       </div>
     </section>
 
-    
-
-   
-
     <section id="gray-bg" class="padding">
       <div class="title-box container">
         <p class="p36">
-          <span style="color: #000000; font-weight: 600">예쁜중고폰에 단골이 많은 이유</span><br /><br />
-        <span style="color: #000000;">이미 </span><span style="color: #f83aaa; font-weight: 600">많은 고객님들이</span>
-         <span style="color: #000000;"> 헛걸음 후 <br /> 최종 선택하신 곳이에요</span>
+          <span style="color: #000000; font-weight: 600"
+            >예쁜중고폰에 단골이 많은 이유</span
+          ><br /><br />
+          <span style="color: #000000">이미 </span
+          ><span style="color: #f83aaa; font-weight: 600">많은 고객님들이</span>
+          <span style="color: #000000">
+            헛걸음 후 <br />
+            최종 선택하신 곳이에요</span
+          >
         </p>
       </div>
 
       <div class="container-two">
         <!-- Box 2 -->
         <div>
-          <img
-            src="/src/img/sec1/vsto.png"
-            alt="예쁜중고폰과 타 천안중고폰 업체 비교"
-            style="width: 95%"
-       margin: auto;
-       display: block;
-          />
-          
+          <img src="/src/img/sec1/vsto.png" alt="예쁜중고폰과 타 천안중고폰 업체
+          비교" style="width: 95%" margin: auto; display: block; />
         </div>
       </div>
     </section>
 
-
-    
     <section id="reasons" class="padding">
       <div class="title-box container">
         <p class="p36">
-          천안 중고폰 매장<br /><span
-            style="color: #f83aaa; font-weight: 600"
+          천안 중고폰 매장<br /><span style="color: #f83aaa; font-weight: 600"
             >직접 비교</span
           >해보고 적었어요
         </p>
@@ -195,17 +278,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="list-box">
             <div class="list-top">
               <span class="p22 list-number">1</span>
-              <p class="p28 list-title">
-                미스터리 쇼퍼를 아시나요?
-              </p>
+              <p class="p28 list-title">미스터리 쇼퍼를 아시나요?</p>
             </div>
 
             <p class="p22 list-text">
               일반인을 섭외하여 가격 및 친절도를 체크하는 일이에요.<br />
-              중고폰 2개를 쥐어주고 천안중고폰 업체 모든 곳을 방문하도록 했죠.<br /><br />
-              주어진 업무는 매입가격과 인기 기종 판매가격을 체크하도록 했어요.<br />
+              중고폰 2개를 쥐어주고 천안중고폰 업체 모든 곳을 방문하도록
+              했죠.<br /><br />
+              주어진 업무는 매입가격과 인기 기종 판매가격을 체크하도록
+              했어요.<br />
               딱 2곳이 가장 높은 가격을 제시했고 무려 15만원까지 차이났어요.<br /><br />
-              그 2개 업체 중 한곳은 예쁜중고폰이였고, 이 사실은 점장님도 모르게 진행했어요.<br /><br />
+              그 2개 업체 중 한곳은 예쁜중고폰이였고, 이 사실은 점장님도 모르게
+              진행했어요.<br /><br />
             </p>
           </div>
 
@@ -227,12 +311,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="p22 list-text">
-              많은 고객님들이 말씀하시는 내용을 계속 듣다보니까 알게된 내용인데요.<br />
-              방문을 유도하려고 전화 상담시 좋은 가격을 이야기하고 막상 방문하면 가격이 나빠져요.<br /><br />
-              그 자리를 나와서 예쁜중고폰 매장에 온 손님의 말씀을 들어보면 가격 차이가 많이 나더라구요.<br />
+              많은 고객님들이 말씀하시는 내용을 계속 듣다보니까 알게된
+              내용인데요.<br />
+              방문을 유도하려고 전화 상담시 좋은 가격을 이야기하고 막상 방문하면
+              가격이 나빠져요.<br /><br />
+              그 자리를 나와서 예쁜중고폰 매장에 온 손님의 말씀을 들어보면 가격
+              차이가 많이 나더라구요.<br />
               물론 어쩔 수 없이 명백한 차감 항목들은 어쩔 수 없지만요.<br /><br />
-
-              
             </p>
           </div>
 
@@ -254,19 +339,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <p class="p22 list-text">
-              이미 다양한 정보를 드렸지만 못믿으시겠다면 직접 비교해보시는 것을 추천드려요.<br />
+              이미 다양한 정보를 드렸지만 못믿으시겠다면 직접 비교해보시는 것을
+              추천드려요.<br />
 
-              단, 전화로는 소용없으니 꼭 직접 발품팔아서 비교해야 진짜 합리적인 업체를 찾을 수 있어요.<br /><br />
+              단, 전화로는 소용없으니 꼭 직접 발품팔아서 비교해야 진짜 합리적인
+              업체를 찾을 수 있어요.<br /><br />
 
-              마지막으로 저희 매장에 방문하시고, 만약 최종 결정한 곳도 저희 매장이라면 상황을 알려주세요. 더 잘해드릴게요!
+              마지막으로 저희 매장에 방문하시고, 만약 최종 결정한 곳도 저희
+              매장이라면 상황을 알려주세요. 더 잘해드릴게요!
             </p>
           </div>
         </div>
       </div>
     </section>
 
-
-   <section id="naver-photos" class="padding">
+    <section id="naver-photos" class="padding">
       <div class="title-box container">
         <p
           class="p36"
@@ -324,10 +411,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-
-
-    
-
     <section id="main_footer">
       <div id="main_footer_div" class="padding">
         <div>
@@ -357,7 +440,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="footer"></div>
 
     <script>
-      $("#header").load("/src/components/header.html");
+      // $("#header").load("/src/components/header.html");
       $("#footer").load("/src/components/footer.html");
     </script>
     <script>
@@ -366,7 +449,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         arrow.classList.toggle("paused");
       }
     </script>
-    <script src="/src/js/script.js" defer></script>
 
+    <!-- 헤더 -->
+    <script>
+      // Function to open the new window with animation
+      function openNewWindow() {
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("new_window").classList.add("show");
+      }
+    
+      // Function to close the new window with animation
+      function closeNewWindow() {
+        document.getElementById("overlay").style.display = "none";
+        document.getElementById("new_window").classList.remove("show");
+      }
+    
+      // Event listener for clicking the menu icon
+      document.getElementById("menu_icon").addEventListener("click", function () {
+        openNewWindow();
+      });
+    
+      // Event listener for clicking the overlay (to close the new window)
+      document.getElementById("overlay").addEventListener("click", function () {
+        closeNewWindow();
+      });
+    
+      document
+        .getElementById("close_button")
+        .addEventListener("click", function () {
+          closeNewWindow();
+        });
+    </script>
+    
+    <script>
+      const headerTexts = document.querySelectorAll(".header__menu__text");
+      const headerBackground = document.getElementById("header-background");
+      const mobileLogo = document.getElementById("mobile_logo");
+      const mobileMenu = document.getElementById("menu_icon");
+    
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 91) {
+        headerBackground.style.backgroundColor = "white";
+        headerTexts.forEach(text => {
+          text.style.color = "#f83aaa";
+    
+          mobileLogo.src = "./src/img/callbutton.png";
+          mobileMenu.src = "./src/img/menu_pink.png";
+        });
+      } else {
+        headerBackground.style.backgroundColor = "transparent";
+        headerTexts.forEach(text => {
+          text.style.color = "";
+        });
+    
+        mobileLogo.src = "./../img/callbutton_white.png";
+        mobileMenu.src = "./../img/menu_white.png";
+      }
+    });
+    
+    </script>
+
+
+
+
+    <script src="/src/js/script.js" defer></script>
   </body>
 </html>
