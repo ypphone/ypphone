@@ -113,7 +113,7 @@ section {
 }
 
 section#main_footer {
-  min-height: 40vh;
+  min-height: 10vh;
   width: 100%;
   background-image: url("/src/img/main/main_background_3.png");
   background-size: cover;
