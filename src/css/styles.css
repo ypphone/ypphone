@@ -112,23 +112,11 @@ section {
   transition: background-color 0.5s;
 }
 
-section#sub_section {
-  height: 30vh;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  overflow: hidden;
-  background-image: url("/src/img/main/main_background_1.png"); /* New background image URL */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 section#main_footer {
   min-height: 40vh;
   width: 100%;
   background-image: url("/src/img/main/main_background_3.png");
-  background-size: 30%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -145,13 +133,14 @@ section#main_footer {
   margin-top: 25px;
   border-radius: 36px;
   background-color: white;
-  color: #f83aaa;
+  color: f83aaa;
 }
 #main_footer_div a {
   text-decoration: none;
   color: black;
   font-weight: 600;
 }
+
 
 .radius-text {
   width: 100%;
