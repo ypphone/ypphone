@@ -142,9 +142,9 @@ section#main_footer {
   align-items: end;
 }
 #main_footer_div .button {
-  padding: 10px 30px;
-  margin-top: 25px;
-  border-radius: 36px;
+  padding: 10px 23px;
+  margin-top: 15px;
+  border-radius: 23px;
   background-color: white;
 }
 #main_footer_div a {
