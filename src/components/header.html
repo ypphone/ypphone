@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+  <div id="container__div">
+<header id="header-background" style="color: white;">
+  <!-- <div style="width: 13%"></div> -->
+  <div
+  class="container"
+    style="
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+    "
+  >
+    <a id="pc_logo" href="/index.html" >
+      <img
+        src="/src/img/logo_white.png"
+        alt="logo"
+        style="width: 120px"
+      />
+    </a>
+
+    <!-- 모바일 사이즈일 때 메뉴 아이콘 -->
+    <div id="mobile_menu">
+      <div style="display: flex;
+      justify-content: space-between;
+      align-items: center;">
+       <a href="tel:0507-1496-0568" >
+
+        <!-- 전화기 아이콘 -->
+        <img id="mobile_logo" src="/src/img/callbutton_white.png" style="width: 28px;" /></a>
+        <a href="/index.html" >
+        <img id="mobile_logo" src="/src/img/logo_white.png" style="width: 100px;" /></a>
+        <img id="menu_icon" src="/src/img/menu_white.png" style="width: 28px;" />
+      </div>
+    </div>
+
+
+<div id="overlay"></div>
+    <div id="new_window">
+      <div style="display: flex; justify-content: space-between">
+        <div style="padding: 20px; margin-top: 20px;">
+          <a href="/index.html"><img src="/src/img/logo_black.png" style="width: 120px" /></a>
+        </div>
+        <div style="padding: 20px; align-self: center; margin-top: 26px">
+          <img
+            id="close_button"
+            src="/src/img/close_button.png"
+            style="width: 24px"
+          />
+        </div>
+      </div>
+      <div>
+        <ul id="main_menu">
+
+            <li><a href="/src/pages/buy.html">매입</a></li>
+            <li><a href="/src/pages/sell.html">판매</a></li>
+
+          <li>
+            <a href="/src/pages/prepaid.html">알뜰/선불폰</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- 메뉴 목록 -->
+    <nav id="pc_menu">
+      <ul>
+        <li><a class="header__menu__text" href="/src/pages/buy.html">매입</a></li>
+         <li><a class="header__menu__text" href="/src/pages/sell.html">판매</a></li>
+        <li><a class="header__menu__text" href="/src/pages/prepaid.html">알뜰/선불폰</a></li>
+
+        <li
+          style="
+            border-radius: 16px;
+            border: 1px solid #f83aaa;
+            padding: 6px 20px;
+            background-color: #f83aaa;
+              margin-top: 20px;
+            margin-right: 12px;
+          ">
+          <a>
+              <font> <i style="font-size: 12px;" class="fas fa-phone-alt"></i> 0507-1496-0568 </font>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- <div style="width: 13%"></div> -->
+</div>
+</header>
+
+<script>
+  // Function to open the new window with animation
+  function openNewWindow() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("new_window").classList.add("show");
+  }
+
+  // Function to close the new window with animation
+  function closeNewWindow() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("new_window").classList.remove("show");
+  }
+
+  // Event listener for clicking the menu icon
+  document.getElementById("menu_icon").addEventListener("click", function () {
+    openNewWindow();
+  });
+
+  // Event listener for clicking the overlay (to close the new window)
+  document.getElementById("overlay").addEventListener("click", function () {
+    closeNewWindow();
+  });
+
+  document
+    .getElementById("close_button")
+    .addEventListener("click", function () {
+      closeNewWindow();
+    });
+</script>
+
+<!-- <script>
+  window.addEventListener("load", function () {
+    var mobileMenu = document.getElementById("mobile_menu");
+    var pcMenu = document.getElementById("pc_menu");
+    var pcLogo = document.getElementById("pc_logo");
+
+    if (window.innerWidth <= 584) {
+      mobileMenu.style.display = "block";
+      pcMenu.style.display = "none";
+      pcLogo.style.display = "none";
+    } else {
+      mobileMenu.style.display = "none";
+      pcMenu.style.display = "block";
+      pcLogo.style.display = "block";
+    }
+  });
+</script> -->
+
+<script>
+  const headerTexts = document.querySelectorAll(".header__menu__text");
+  const headerBackground = document.getElementById("header-background");
+  const mobileLogo = document.getElementById("mobile_logo");
+  const mobileMenu = document.getElementById("menu_icon");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 91) {
+    headerBackground.style.backgroundColor = "white";
+    headerTexts.forEach(text => {
+      text.style.color = "#f83aaa";
+
+      mobileLogo.src = "./src/img/callbutton.png";
+      mobileMenu.src = "./src/img/menu_pink.png";
+    });
+  } else {
+    headerBackground.style.backgroundColor = "transparent";
+    headerTexts.forEach(text => {
+      text.style.color = "";
+    });
+
+    mobileLogo.src = "./src/img/callbutton_white.png";
+    mobileMenu.src = "./src/img/menu_white.png";
+  }
+});
+
+</script>
+<!-- 
+<script>
+  window.addEventListener("resize", function () {
+    var mobileMenu = document.getElementById("mobile_menu");
+    var pcMenu = document.getElementById("pc_menu");
+    var pcLogo = document.getElementById("pc_logo");
+
+    if (window.innerWidth <= 584) {
+      mobileMenu.style.display = "block";
+      pcMenu.style.display = "none";
+      pcLogo.style.display = "none";
+    } else {
+      mobileMenu.style.display = "none";
+      pcMenu.style.display = "block";
+      pcLogo.style.display = "block";
+    }
+  });
+</script> -->
+
+</body>
+</html>
