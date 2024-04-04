@@ -126,7 +126,7 @@ section#sub_section {
 
 
 section#main_footer {
-  min-height: 40vh;
+  min-height: 25vh;
   width: 100%;
   background-image: url("/src/img/main/main_background_3.png");
   background-size: cover;
@@ -146,7 +146,6 @@ section#main_footer {
   margin-top: 25px;
   border-radius: 36px;
   background-color: white;
-  color: f83aaa;
 }
 #main_footer_div a {
   text-decoration: none;
