@@ -128,7 +128,7 @@ section#main_footer {
   min-height: 40vh;
   width: 100%;
   background-image: url("/src/img/main/main_background_3.png");
-  background-size: cover;
+  background-size: 30%;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
