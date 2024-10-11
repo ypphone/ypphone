@@ -586,7 +586,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 100;
   font-style: normal;
-    url(/src/font/SCDream1.otf)
+    url("/src/font/SCDream1.otf")
       format("woff");
   font-display: swap;
 }
@@ -594,7 +594,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 200;
   font-style: normal;
-    url(/src/font/SCDream2.otf)
+    url("/src/font/SCDream2.otf")
       format("woff");
   font-display: swap;
 }
@@ -602,7 +602,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 300;
   font-style: normal;
-    url(/src/font/SCDream3.otf)
+    url("/src/font/SCDream3.otf")
       format("woff");
   font-display: swap;
 }
@@ -610,7 +610,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 400;
   font-style: normal;
-    url(/src/font/SCDream4.otf)
+    url("/src/font/SCDream4.otf")
       format("woff");
   font-display: swap;
 }
@@ -618,7 +618,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 500;
   font-style: normal;
-    url(/src/font/SCDream5.otf)
+    url("/src/font/SCDream5.otf")
       format("woff");
   font-display: swap;
 }
@@ -626,7 +626,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 600;
   font-style: normal;
-    url(/src/font/SCDream6.otf)
+    url("/src/font/SCDream6.otf")
       format("woff");
   font-display: swap;
 }
@@ -634,7 +634,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 700;
   font-style: normal;
-    url(/src/font/SCDream7.otf)
+    url("/src/font/SCDream7.otf")
       format("woff");
   font-display: swap;
 }
@@ -642,7 +642,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 800;
   font-style: normal;
-    url(/src/font/SCDream8.otf)
+    url("/src/font/SCDream8.otf")
       format("woff");
   font-display: swap;
 }
@@ -650,7 +650,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 900;
   font-style: normal;
-    url(/src/font/SCDream9.otf)
+    url("/src/font/SCDream9.otf")
       format("woff");
   font-display: swap;
 }
