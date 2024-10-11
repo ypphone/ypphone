@@ -586,9 +586,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 100;
   font-style: normal;
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream1.woff2)
-      format("woff2"),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream1.woff)
+    url(/src/font/SCDream1.otf)
       format("woff");
   font-display: swap;
 }
@@ -596,9 +594,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 200;
   font-style: normal;
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream2.woff2)
-      format("woff2"),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream2.woff)
+    url(/src/font/SCDream2.otf)
       format("woff");
   font-display: swap;
 }
@@ -606,9 +602,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 300;
   font-style: normal;
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream3.woff2)
-      format("woff2"),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream3.woff)
+    url(/src/font/SCDream3.otf)
       format("woff");
   font-display: swap;
 }
@@ -616,9 +610,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 400;
   font-style: normal;
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff2)
-      format("woff2"),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff)
+    url(/src/font/SCDream4.otf)
       format("woff");
   font-display: swap;
 }
@@ -626,9 +618,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 500;
   font-style: normal;
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff2)
-      format("woff2"),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff)
+    url(/src/font/SCDream5.otf)
       format("woff");
   font-display: swap;
 }
@@ -636,9 +626,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 600;
   font-style: normal;
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff2)
-      format("woff2"),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff)
+    url(/src/font/SCDream6.otf)
       format("woff");
   font-display: swap;
 }
@@ -646,9 +634,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 700;
   font-style: normal;
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream7.woff2)
-      format("woff2"),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream7.woff)
+    url(/src/font/SCDream7.otf)
       format("woff");
   font-display: swap;
 }
@@ -656,9 +642,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 800;
   font-style: normal;
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream8.woff2)
-      format("woff2"),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream8.woff)
+    url(/src/font/SCDream8.otf)
       format("woff");
   font-display: swap;
 }
@@ -666,9 +650,7 @@ a span {
   font-family: "SCoreDream";
   font-weight: 900;
   font-style: normal;
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream9.woff2)
-      format("woff2"),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream9.woff)
+    url(/src/font/SCDream9.otf)
       format("woff");
   font-display: swap;
 }
