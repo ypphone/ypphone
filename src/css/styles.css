@@ -583,74 +583,65 @@ a span {
 }
 /* font */
 @font-face {
-  font-family: "SCoreDream";
-  font-weight: 100;
-  font-style: normal;
-    url("/src/font/SCDream1.otf")
-      format("woff");
-  font-display: swap;
+font-family: "SCoreDream";
+font-weight: 100;
+font-style: normal;
+src: url("/src/font/SCDream1.otf") format("opentype");
+font-display: swap;
 }
 @font-face {
-  font-family: "SCoreDream";
-  font-weight: 200;
-  font-style: normal;
-    url("/src/font/SCDream2.otf")
-      format("woff");
-  font-display: swap;
+font-family: "SCoreDream";
+font-weight: 200;
+font-style: normal;
+src: url("/src/font/SCDream2.otf") format("opentype");
+font-display: swap;
 }
 @font-face {
-  font-family: "SCoreDream";
-  font-weight: 300;
-  font-style: normal;
-    url("/src/font/SCDream3.otf")
-      format("woff");
-  font-display: swap;
+font-family: "SCoreDream";
+font-weight: 300;
+font-style: normal;
+src: url("/src/font/SCDream3.otf") format("opentype");
+font-display: swap;
 }
 @font-face {
-  font-family: "SCoreDream";
-  font-weight: 400;
-  font-style: normal;
-    url("/src/font/SCDream4.otf")
-      format("woff");
-  font-display: swap;
+font-family: "SCoreDream";
+font-weight: 400;
+font-style: normal;
+src: url("/src/font/SCDream4.otf") format("opentype");
+font-display: swap;
 }
 @font-face {
-  font-family: "SCoreDream";
-  font-weight: 500;
-  font-style: normal;
-    url("/src/font/SCDream5.otf")
-      format("woff");
-  font-display: swap;
+font-family: "SCoreDream";
+font-weight: 500;
+font-style: normal;
+src: url("/src/font/SCDream5.otf") format("opentype");
+font-display: swap;
 }
 @font-face {
-  font-family: "SCoreDream";
-  font-weight: 600;
-  font-style: normal;
-    url("/src/font/SCDream6.otf")
-      format("woff");
-  font-display: swap;
+font-family: "SCoreDream";
+font-weight: 600;
+font-style: normal;
+src: url("/src/font/SCDream6.otf") format("opentype");
+font-display: swap;
 }
 @font-face {
-  font-family: "SCoreDream";
-  font-weight: 700;
-  font-style: normal;
-    url("/src/font/SCDream7.otf")
-      format("woff");
-  font-display: swap;
+font-family: "SCoreDream";
+font-weight: 700;
+font-style: normal;
+src: url("/src/font/SCDream7.otf") format("opentype");
+font-display: swap;
 }
 @font-face {
-  font-family: "SCoreDream";
-  font-weight: 800;
-  font-style: normal;
-    url("/src/font/SCDream8.otf")
-      format("woff");
-  font-display: swap;
+font-family: "SCoreDream";
+font-weight: 800;
+font-style: normal;
+src: url("/src/font/SCDream8.otf") format("opentype");
+font-display: swap;
 }
 @font-face {
-  font-family: "SCoreDream";
-  font-weight: 900;
-  font-style: normal;
-    url("/src/font/SCDream9.otf")
-      format("woff");
-  font-display: swap;
+font-family: "SCoreDream";
+font-weight: 900;
+font-style: normal;
+src: url("/src/font/SCDream9.otf") format("opentype");
+font-display: swap;
 }
