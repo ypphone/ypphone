@@ -46,6 +46,10 @@ nav ul li a {
   padding: 100px 0;
 }
 
+.padding-three {
+   padding: 60px 0px 0px 0px;
+}
+
 #overlay {
   position: fixed;
   top: 0;
@@ -192,6 +196,12 @@ section#main_footer {
   width: 95%;
  margin: 0px auto;
   display: flex;
+ justify-content: center;
+  text-align: center;
+}
+
+.container-three {
+   font-size: 0 ;
  justify-content: center;
   text-align: center;
 }
