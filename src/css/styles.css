@@ -201,6 +201,8 @@ section#main_footer {
 }
 
 .container-three {
+    width: 65%;
+ margin: 0px auto;
    font-size: 0 ;
  justify-content: center;
   text-align: center;
