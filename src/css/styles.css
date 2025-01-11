@@ -50,6 +50,14 @@ nav ul li a {
    padding: 60px 0px 0px 0px;
 }
 
+.padding-t {
+   padding: 100px 0px 0px 0px;
+}
+
+.padding-b {
+   padding: 0px 0px 60px 0px;
+}
+
 #overlay {
   position: fixed;
   top: 0;
