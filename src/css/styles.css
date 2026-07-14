@@ -851,6 +851,14 @@ main > section + section {
   font-size: 15px;
 }
 
+.notice.notice-contrast {
+  color: var(--ink-soft);
+  background: #fff;
+  border: 1px solid #eea0b7;
+  border-left: 5px solid var(--pink);
+  box-shadow: 0 8px 22px rgba(48, 40, 42, 0.07);
+}
+
 .tariff-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
