@@ -1144,6 +1144,12 @@ main > section + section {
   min-height: 46px;
 }
 
+@media (min-width: 961px) {
+  .cta-band {
+    padding-inline: max(20px, calc((100% - var(--content)) / 2));
+  }
+}
+
 .site-footer {
   padding: 62px 0 106px;
   color: #fff;
