@@ -1,88 +1,17 @@
-<footer>
-  
-
-  
-  <img src="/src/img/page-logo.png" style="width: 120px; margin-top: 50px" />
-  <div style="margin-top: 20px; margin-bottom: 20px">
-    <a href="https://blog.naver.com/prettyphone93" target="_blank"
-      ><img
-        src="/src/img/naver_logo.png"
-        style="width: 36px; margin-right: 4px"
-    /></a>
-    <a href="https://talk.naver.com/ct/w5t762" target="_blank"
-      ><img src="/src/img/talktalk_logo.png" 
-         style="width: 36px; margin-left: 4px; margin-right: 4px"
-    /></a>
-    <a href="https://pf.kakao.com/_xeaKNG/chat/" target="_blank"
-      ><img src="/src/img/kakao_logo.png"
-         style="width: 36px; margin-left: 4px; margin-right: 4px"
-    /></a>
-       <a href="https://www.ictmarket.or.kr:8443/ajax/ajax3.do?id=PRE0000187986&seq=1&yn=2" target="_blank"
-      ><img src="/src/img/ntel.png"
-         style="width: 36px; margin-left: 4px"
-    /></a>       
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/src/img/footer-logo-official.png?v=2" alt="예쁜중고폰 공식 로고" />
+        <p>중고폰 매입과 판매, 선불폰 개통, 데이터복구 상담까지. 천안 두정동 예쁜중고폰입니다.</p>
+      </div>
+      <nav class="footer-nav" aria-label="하단 메뉴">
+        <a href="/src/pages/buy">중고폰 매입</a>
+        <a href="/src/pages/sell">중고폰 판매</a>
+        <a href="/src/pages/prepaid">선불폰 개통</a>
+        <a href="/src/pages/datarecover">데이터복구</a>
+        <a href="https://www.ictmarket.or.kr:8443/ajax/ajax3.do?id=PRE0000187986&amp;seq=1&amp;yn=2" target="_blank" rel="noopener">통신판매 사전승낙서</a>
+      </nav>
+    </div>
   </div>
-  
-  <p class="p14" id="pc_footer" style="font-weight: 300; display: none">
-    상호: 예쁜중고폰 | 대표자: 김진아 | 사업자 번호: 622-03-77386<br />고객센터:
-    0507-1496-0568 | 이메일: ypphone@naver.com<br />주소: 충남 천안시 서북구
-    두정중7길 1-12
-  </p>
-  <p
-    id="mobile_footer"
-    style="font-size: 11px; font-weight: 300; display: none"
-  >
-    상호: 예쁜중고폰 | 대표자: 김진아 | 사업자 번호: 622-03-77386<br />고객센터:
-    0507-1496-0568 | 이메일: ypphone@naver.com<br />주소: 충남 천안시 서북구
-    두정중7길 1-12
-  </p>
-  <p class="p14" style="font-weight: 300; margin-bottom: 60px">
-    Copyright &copy; 2023 예쁜중고폰 Co., Ltd. All rights reserved.
-  </p>
-
-    
-
-
-   <span itemscope="" itemtype="http://schema.org/Organization">
-<link itemprop="url" href="https://예쁜중고폰.com">
-<a itemprop="sameAs" href="https://blog.naver.com/prettyphone93"></a>
-<a itemprop="sameAs" href="https://talk.naver.com/ct/w5t762"></a>
-</span>
-
-
-  
 </footer>
-
-<script>
-  window.onload = function () {
-    var pcFooter = document.getElementById("pc_footer");
-    var mobileFooter = document.getElementById("mobile_footer");
-    var isMobile = false;
-
-    if (window.innerWidth <= 768) {
-      isMobile = true;
-    }
-
-    if (isMobile) {
-      mobileFooter.style.display = "block";
-      pcFooter.style.display = "none";
-    } else {
-      mobileFooter.style.display = "none";
-      pcFooter.style.display = "block";
-    }
-  };
-</script>
-<script>
-  window.addEventListener("resize", function () {
-    var pcFooter = document.getElementById("pc_footer");
-    var mobileFooter = document.getElementById("mobile_footer");
-
-    if (window.innerWidth <= 768) {
-      mobileFooter.style.display = "block";
-      pcFooter.style.display = "none";
-    } else {
-      mobileFooter.style.display = "none";
-      pcFooter.style.display = "block";
-    }
-  });
-</script>
