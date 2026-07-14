@@ -6,7 +6,7 @@
   overflow: hidden;
   isolation: isolate;
   color: #fff;
-  background: url("/src/img/sec1/store-hero-mosaic.png") center 46% / cover no-repeat;
+  background: url("/src/img/sec1/store-hero-blur.png") center 46% / cover no-repeat;
 }
 
 .home-hero::before {
