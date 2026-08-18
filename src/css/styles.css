@@ -196,8 +196,66 @@ h4 {
 }
 
 .phone-link {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
   font-size: 14px;
   font-weight: 800;
+  transition: color 160ms ease;
+}
+
+.header-actions .phone-link .material-symbols-rounded {
+  display: inline-block;
+  color: var(--ink-soft);
+  font-size: 18px;
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 20;
+  line-height: 1;
+  transition: color 160ms ease;
+}
+
+.phone-link:hover,
+.phone-link:hover .material-symbols-rounded {
+  color: var(--pink-deep);
+}
+
+.mobile-header-contact {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(54, 38, 47, 0.08);
+}
+
+.mobile-header-contact .material-symbols-rounded {
+  font-size: 21px;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 22;
+}
+
+.kakao-symbol {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.mobile-header-kakao .kakao-symbol {
+  width: 32px;
+  height: 32px;
+}
+
+.mobile-header-phone {
+  color: var(--pink-deep);
+}
+
+.mobile-header-kakao {
+  color: #171200;
+  background: #fee500;
+  border-color: #f0d800;
 }
 
 .menu-button {
@@ -1153,8 +1211,8 @@ main > section + section {
 .site-footer {
   padding: 62px 0 106px;
   color: #fff;
-  background: var(--gray-deep);
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  background: #242326;
+  border-top: 0;
 }
 
 .footer-grid {
@@ -1231,6 +1289,71 @@ main > section + section {
   border-right: 0;
 }
 
+.sticky-contact .kakao-symbol {
+  width: 36px;
+  height: 36px;
+}
+
+.mobile-service-nav {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 120;
+  display: none;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  min-height: 68px;
+  padding: 5px 8px max(5px, env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.97);
+  border-top: 1px solid rgba(39, 34, 37, 0.12);
+  box-shadow: 0 -8px 26px rgba(46, 32, 40, 0.09);
+  backdrop-filter: blur(14px);
+}
+
+.mobile-service-nav a {
+  display: flex;
+  min-width: 0;
+  min-height: 56px;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #81777d;
+  border-radius: 14px;
+  font-size: 10px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.mobile-service-nav a .material-symbols-rounded {
+  display: grid;
+  width: 34px;
+  height: 30px;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 22px;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.mobile-service-nav a strong {
+  overflow: hidden;
+  max-width: 100%;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mobile-service-nav a[aria-current="page"] {
+  color: var(--pink-deep);
+}
+
+.mobile-service-nav a[aria-current="page"] .material-symbols-rounded {
+  color: #fff;
+  background: var(--pink);
+  box-shadow: 0 5px 14px rgba(242, 60, 116, 0.24);
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
+}
+
 @media (max-width: 960px) {
   .header-inner {
     grid-template-columns: 1fr auto;
@@ -1242,7 +1365,19 @@ main > section + section {
   }
 
   .menu-button {
-    display: block;
+    display: none;
+  }
+
+  .mobile-header-contact {
+    display: inline-flex;
+  }
+
+  .mobile-service-nav {
+    display: grid;
+  }
+
+  .sticky-contact {
+    display: none !important;
   }
 
   .section {
@@ -1395,19 +1530,34 @@ main > section + section {
   }
 
   .footer-grid {
-    gap: 42px;
+    gap: 24px;
   }
 
   .footer-nav {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 18px;
+    font-size: 12px;
   }
 
-  .sticky-contact {
-    display: grid;
+  .footer-brand img {
+    width: 118px;
+  }
+
+  .footer-brand > p {
+    display: none;
+  }
+
+  .footer-info {
+    margin-top: 26px;
+    padding-top: 17px;
+    font-size: 10px;
+    line-height: 1.7;
   }
 
   .site-footer {
-    padding-bottom: 104px;
+    padding: 36px 0 78px;
+    background: #242326;
+    border-top: 0;
   }
 }
 
