@@ -1,9 +1,17 @@
 @font-face {
+  font-family: "Pretendard Variable";
+  font-style: normal;
+  font-weight: 45 920;
+  src: url("/src/font/PretendardVariable-site-v1.woff2") format("woff2-variations");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "SCoreDream";
   font-style: normal;
   font-weight: 400;
   src:
-    url("/src/font/SCDream4.woff2") format("woff2"),
+    url("/src/font/SCDream4-site-v1.woff2") format("woff2"),
     url("/src/font/SCDream4.otf") format("opentype");
   font-display: swap;
 }
@@ -13,7 +21,7 @@
   font-style: normal;
   font-weight: 600;
   src:
-    url("/src/font/SCDream6.woff2") format("woff2"),
+    url("/src/font/SCDream6-site-v1.woff2") format("woff2"),
     url("/src/font/SCDream6.otf") format("opentype");
   font-display: swap;
 }
@@ -23,9 +31,33 @@
   font-style: normal;
   font-weight: 800;
   src:
-    url("/src/font/SCDream8.woff2") format("woff2"),
+    url("/src/font/SCDream8-site-v1.woff2") format("woff2"),
     url("/src/font/SCDream8.otf") format("opentype");
   font-display: swap;
+}
+
+@font-face {
+  font-family: "Material Symbols Rounded";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/src/font/MaterialSymbolsRounded-site-v1.woff2") format("woff2");
+  font-display: block;
+}
+
+.material-symbols-rounded {
+  display: inline-block;
+  font-family: "Material Symbols Rounded";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-feature-settings: "liga";
+  letter-spacing: normal;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {
