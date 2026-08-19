@@ -1,10 +1,10 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
-
 @font-face {
   font-family: "SCoreDream";
   font-style: normal;
   font-weight: 400;
-  src: url("/src/font/SCDream4.otf") format("opentype");
+  src:
+    url("/src/font/SCDream4.woff2") format("woff2"),
+    url("/src/font/SCDream4.otf") format("opentype");
   font-display: swap;
 }
 
@@ -12,7 +12,9 @@
   font-family: "SCoreDream";
   font-style: normal;
   font-weight: 600;
-  src: url("/src/font/SCDream6.otf") format("opentype");
+  src:
+    url("/src/font/SCDream6.woff2") format("woff2"),
+    url("/src/font/SCDream6.otf") format("opentype");
   font-display: swap;
 }
 
@@ -20,7 +22,9 @@
   font-family: "SCoreDream";
   font-style: normal;
   font-weight: 800;
-  src: url("/src/font/SCDream8.otf") format("opentype");
+  src:
+    url("/src/font/SCDream8.woff2") format("woff2"),
+    url("/src/font/SCDream8.otf") format("opentype");
   font-display: swap;
 }
 
@@ -61,7 +65,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
-  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  font-family: "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   line-height: 1.65;
   word-break: keep-all;
 }
@@ -107,7 +111,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "SCoreDream", "Pretendard", sans-serif;
+  font-family: "SCoreDream", "Pretendard Variable", "Pretendard", sans-serif;
   line-height: 1.18;
   letter-spacing: 0;
 }
