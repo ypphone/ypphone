@@ -34,3 +34,47 @@ if (["127.0.0.1", "localhost"].includes(window.location.hostname)) {
     link.href = `${url.pathname}${url.search}${url.hash}`;
   });
 }
+
+// Warm only the page the visitor shows intent to open. This keeps the initial
+// page light while reducing the wait between same-origin service pages.
+const prefetchedPages = new Set();
+const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+const mayPrefetch = !connection?.saveData && !["slow-2g", "2g"].includes(connection?.effectiveType);
+
+function prefetchPage(link) {
+  if (!mayPrefetch || !link) return;
+
+  const url = new URL(link.href, window.location.href);
+  const currentUrl = new URL(window.location.href);
+  const isPublicPage = url.pathname === "/" || url.pathname.startsWith("/src/pages/");
+
+  if (
+    url.origin !== window.location.origin ||
+    !isPublicPage ||
+    (url.pathname === currentUrl.pathname && url.search === currentUrl.search) ||
+    prefetchedPages.has(url.href)
+  ) {
+    return;
+  }
+
+  const hint = document.createElement("link");
+  hint.rel = "prefetch";
+  hint.as = "document";
+  hint.href = url.href;
+  document.head.append(hint);
+  prefetchedPages.add(url.href);
+}
+
+let prefetchTimer;
+
+document.addEventListener("pointerover", (event) => {
+  const link = event.target.closest?.("a[href]");
+  window.clearTimeout(prefetchTimer);
+  prefetchTimer = window.setTimeout(() => prefetchPage(link), 120);
+});
+
+document.addEventListener("pointerout", () => window.clearTimeout(prefetchTimer));
+document.addEventListener("focusin", (event) => prefetchPage(event.target.closest?.("a[href]")));
+document.addEventListener("touchstart", (event) => prefetchPage(event.target.closest?.("a[href]")), {
+  passive: true,
+});

@@ -37,6 +37,14 @@
 }
 
 @font-face {
+  font-family: "SCoreDreamHero";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/src/font/SCDream8-hero-v1.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Material Symbols Rounded";
   font-style: normal;
   font-weight: 400;
@@ -146,6 +154,10 @@ h4 {
   font-family: "SCoreDream", "Pretendard Variable", "Pretendard", sans-serif;
   line-height: 1.18;
   letter-spacing: 0;
+}
+
+h1 {
+  font-family: "SCoreDreamHero", "SCoreDream", "Pretendard Variable", Pretendard, sans-serif;
 }
 
 .skip-link {
