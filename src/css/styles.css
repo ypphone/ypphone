@@ -31,7 +31,7 @@
   font-style: normal;
   font-weight: 800;
   src:
-    url("/src/font/SCDream8-site-v1.woff2") format("woff2"),
+    url("/src/font/SCDream8-site-v2.woff2") format("woff2"),
     url("/src/font/SCDream8.otf") format("opentype");
   font-display: swap;
 }
