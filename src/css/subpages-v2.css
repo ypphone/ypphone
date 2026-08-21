@@ -733,6 +733,17 @@
   margin-top: 28px;
 }
 
+.subpage .sp-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.subpage .sp-benefit-grid .sp-bento-card {
+  grid-column: auto;
+  min-height: 300px;
+}
+
 .subpage .sp-bento-wide {
   grid-column: span 7;
   grid-row: span 2;
@@ -1705,6 +1716,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .subpage .sp-benefit-grid {
+    grid-template-columns: 1fr;
+  }
+
   .subpage .sp-bento-card,
   .subpage .sp-bento-wide,
   .subpage .sp-bento-media {
@@ -1958,6 +1973,14 @@
 
   .subpage .sp-bento {
     grid-template-columns: 1fr;
+  }
+
+  .subpage .sp-benefit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subpage .sp-benefit-grid .sp-bento-card {
+    min-height: 250px;
   }
 
   .subpage .sp-bento-card,
