@@ -100,6 +100,70 @@ const isLocalPreview = ["127.0.0.1", "localhost"].includes(window.location.hostn
 const marketingDebugEvents = [];
 window.__ypMarketingDebug = marketingDebugEvents;
 
+// Naver Search Ads appends its own n_* parameters when campaign-level
+// automatic tracking is enabled. GA4 does not interpret those parameters as
+// campaign attribution, so translate known Powerlink ad groups into the shared
+// UTM standard before GTM starts. Existing UTM values always win.
+const naverPowerlinkGroups = Object.freeze({
+  "grp-a001-01-000000041947758": Object.freeze({
+    campaign: "cheonan_powerlink_business_hours",
+    content: "pc_business_hours",
+  }),
+  "grp-a001-01-000000041948496": Object.freeze({
+    campaign: "cheonan_powerlink_business_hours",
+    content: "mobile_business_hours",
+  }),
+  "grp-a001-01-000000042778015": Object.freeze({
+    campaign: "cheonan_powerlink_off_hours",
+    content: "pc_off_hours",
+  }),
+  "grp-a001-01-000000042778016": Object.freeze({
+    campaign: "cheonan_powerlink_off_hours",
+    content: "mobile_off_hours",
+  }),
+});
+
+function applyNaverPowerlinkUtm() {
+  const url = new URL(window.location.href);
+  const campaignType = url.searchParams.get("n_campaign_type");
+  const adGroupId = url.searchParams.get("n_ad_group") || "";
+  const hasNaverTrackingMarker = ["n_ad_group", "n_ad", "n_keyword", "n_media"].some((name) =>
+    url.searchParams.has(name),
+  );
+
+  if (campaignType !== "1" || !hasNaverTrackingMarker) return false;
+
+  const group = naverPowerlinkGroups[adGroupId] || {
+    campaign: "cheonan_powerlink_unmapped",
+    content: "unmapped_adgroup",
+  };
+  const attribution = {
+    utm_source: "naver",
+    utm_medium: "cpc",
+    utm_campaign: group.campaign,
+    utm_content: group.content,
+  };
+  let changed = false;
+
+  Object.entries(attribution).forEach(([name, value]) => {
+    if (url.searchParams.has(name)) return;
+    url.searchParams.set(name, value);
+    changed = true;
+  });
+
+  window.__ypMarketingAttribution = Object.freeze({
+    provider: "naver_search_ads",
+    adGroupId,
+    ...attribution,
+  });
+
+  if (changed) {
+    window.history.replaceState(window.history.state, "", `${url.pathname}${url.search}${url.hash}`);
+  }
+
+  return changed;
+}
+
 function loadGoogleTagManager() {
   if (isLocalPreview || !marketingConfig.gtmContainerId) return false;
   if (document.querySelector('script[data-yp-google-tag-manager="true"]')) return true;
@@ -248,5 +312,6 @@ if (locationSection && "IntersectionObserver" in window) {
   observer.observe(locationSection);
 }
 
+applyNaverPowerlinkUtm();
 loadGoogleTagManager();
 void loadNaverTracking();
