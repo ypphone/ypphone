@@ -216,15 +216,38 @@ function pushGa4MarketingEvent(payload) {
 }
 
 let naverTrackingPromise;
+let naverTrackingInitialized = false;
+
+function initializeNaverTracking() {
+  if (
+    naverTrackingInitialized ||
+    !window.wcs ||
+    typeof window.wcs.inflow !== "function" ||
+    typeof window.wcs_do !== "function"
+  ) {
+    return naverTrackingInitialized;
+  }
+
+  window.wcs_add = window.wcs_add || {};
+  window.wcs_add.wa = marketingConfig.naverAccountId;
+  window.wcs.inflow(marketingConfig.naverCookieDomain);
+  window.wcs_do();
+  naverTrackingInitialized = true;
+  document.documentElement.dataset.ypNaverTrackingState = "ready";
+  return true;
+}
 
 function loadNaverTracking() {
   if (isLocalPreview || !marketingConfig.naverAccountId) return Promise.resolve(false);
+  if (initializeNaverTracking()) return Promise.resolve(true);
   if (naverTrackingPromise) return naverTrackingPromise;
 
   naverTrackingPromise = new Promise((resolve) => {
     const existing = document.querySelector('script[data-yp-naver-tracking="true"]');
-    if (existing && window.wcs) {
-      resolve(true);
+    if (existing) {
+      const initialized = initializeNaverTracking();
+      if (!initialized) document.documentElement.dataset.ypNaverTrackingState = "unavailable";
+      resolve(initialized);
       return;
     }
 
@@ -233,17 +256,14 @@ function loadNaverTracking() {
     script.async = true;
     script.dataset.ypNaverTracking = "true";
     script.addEventListener("load", () => {
-      if (!window.wcs) {
-        resolve(false);
-        return;
-      }
-      window.wcs_add = window.wcs_add || {};
-      window.wcs_add.wa = marketingConfig.naverAccountId;
-      window.wcs.inflow(marketingConfig.naverCookieDomain);
-      window.wcs_do?.();
-      resolve(true);
+      const initialized = initializeNaverTracking();
+      if (!initialized) document.documentElement.dataset.ypNaverTrackingState = "unavailable";
+      resolve(initialized);
     });
-    script.addEventListener("error", () => resolve(false));
+    script.addEventListener("error", () => {
+      document.documentElement.dataset.ypNaverTrackingState = "unavailable";
+      resolve(false);
+    });
     document.head.append(script);
   });
 
@@ -258,8 +278,9 @@ async function pushNaverMarketingEvent(eventName) {
   const type = testMode ? `test_${conversionType}` : conversionType;
   marketingDebugEvents.push({ provider: "naver", event: eventName, type, testMode });
 
-  if (!(await loadNaverTracking()) || !window.wcs?.trans) return;
+  if (!(await loadNaverTracking()) || typeof window.wcs?.trans !== "function") return;
   window.wcs.trans({ type });
+  document.documentElement.dataset.ypNaverLastConversion = type;
 }
 
 function trackMarketingEvent(eventName, details = {}) {
