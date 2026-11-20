@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://xn--299am38ap8d3qdvts.com/sitemap.xml
